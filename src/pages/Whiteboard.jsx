@@ -25,7 +25,7 @@ const Whiteboard = () => {
       // Fetch existing drawing for editing
       const fetchDrawing = async () => {
         try {
-          const response = await axios.get(`http://localhost:5000/drawings/drawings/${id}`);
+          const response = await axios.get(`${baseURL}/drawings/drawings/${id}`);
           const { title, shapes } = response.data;
 
           // Ensure each shape has a unique ID and proper properties
